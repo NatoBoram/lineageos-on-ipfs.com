@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- https://developers.google.com/speed/libraries/#jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- https://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+
+	<!-- https://twitter.github.io/hogan.js/ -->
+	<script src="http://twitter.github.com/hogan.js/builds/3.0.1/hogan-3.0.1.js"></script>
+
+	<!-- Templates -->
+	<script src="templates/devices.js"></script>
+
+	<!-- Custom -->
+	<script src="js/home.js"></script>
+
+	<title>LineageOS on IPFS</title>
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="https://lineageos-on-ipfs.com/">LineageOS on IPFS</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<!--
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				-->
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Header -->
+	<div class="jumbotron text-center" style="margin-bottom:0">
+		<h1>LineageOS on IPFS</h1>
+		<p>A permanent solution to LineageOS' storage problem.</p>
+	</div>
+
+	<!-- Body -->
+	<div class="container">
+
+		<!-- Devices -->
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Device</th>
+						<th>Version</th>
+						<th>File</th>
+						<th>Size</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody id="devices">
+					<!-- HoganJS -->
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</body>
+
+</html>
