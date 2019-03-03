@@ -3,6 +3,10 @@ losgoi.home = {
 
 	init: function() {
 		$.getJSON("ajax/devices.php", null, losgoi.home.show);
+
+		// Start IPFS
+		const node = new window.Ipfs();
+		node.on('ready', () => {});
 	},
 
 	show: function(json) {
