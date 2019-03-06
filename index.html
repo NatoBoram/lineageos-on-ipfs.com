@@ -34,15 +34,18 @@
 
 <body>
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="https://lineageos-on-ipfs.com/">LineageOS on IPFS</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
-				<!--
+	<!-- Header -->
+	<header>
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<a class="navbar-brand" href="https://lineageos-on-ipfs.com/">LineageOS on IPFS</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<!--
 				<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
 				</li>
@@ -53,18 +56,97 @@
 					<a class="nav-link" href="#">Link</a>
 				</li>
 				-->
-			</ul>
-		</div>
-	</nav>
+				</ul>
+			</div>
+		</nav>
 
-	<!-- Header -->
-	<div class="jumbotron text-center" style="margin-bottom:0">
-		<h1>LineageOS on IPFS</h1>
-		<p>A permanent solution to LineageOS' storage problem.</p>
-	</div>
+		<!-- Jumbotron -->
+		<div class="jumbotron text-center">
+			<h1>LineageOS on IPFS</h1>
+			<p>A permanent solution to LineageOS' storage problem.</p>
+		</div>
+
+	</header>
 
 	<!-- Body -->
-	<div class="container">
+	<main class="container">
+
+		<!-- How to use -->
+		<div class="card">
+			<div class="card-header">
+				<a class="card-link" data-toggle="collapse" href="#howtoouse">
+					Learn more
+				</a>
+			</div>
+			<div id="howtoouse" class="collapse hide">
+				<div class="card-body">
+
+					<!-- Introduction -->
+					<p>
+						This website attempts to archive the latest LineageOS build for every devices on IPFS.
+					</p>
+					<p>
+						You can optionally download a few tools to make your download faster and improve the reliability of the network.
+						Please note that all of this is optional and
+						you can still download content hosted on IPFS without installing anything.
+					</p>
+
+					<ol>
+						<!-- IPFS -->
+						<li>
+							<strong>Install <a href="https://github.com/ipfs/go-ipfs">IPFS</a></strong>
+							<p>
+								This is the command line tool for accessing IPFS.
+								It's very useful if you want to dig deeper into IPFS and
+								necessary if you want to gain advantages of using IPFS over HTTP.
+							</p>
+						</li>
+
+						<!-- IPFS Desktop -->
+						<li>
+							<strong>Install <a href="https://github.com/ipfs-shipyard/ipfs-desktop/">IPFS Desktop</a></strong>
+							<p>
+								This is a desktop app which automatically spawns an IPFS node for you and help you manage it.
+								If you prefer the command line,
+								you can start your own node with <code>ipfs daemon</code>.
+							</p>
+						</li>
+
+						<!-- IPFS Companion-->
+						<li>
+							<strong>Install <a href="https://github.com/ipfs-shipyard/ipfs-companion">IPFS Companion</a></strong>
+							<p>
+								This browser extension will redirect your network traffic from HTTP to IPFS,
+								making it faster to download from IPFS.
+								If you don't install it, you can still download what's on IPFS,
+								but you'll need to request your content from a public IPFS node.
+								Luckily, this website exposes a public IPFS node.
+							</p>
+						</li>
+
+						<!-- IPFS Swarm Connect -->
+						<li>
+							<p><strong>Connect to this node's swarm</strong></p>
+							<pre><code>ipfs swarm connect /ip6/2604:a880:cad:d0::17:2001/tcp/4001/ipfs/QmbowGXGciNnipnv3SwKMa5wt3uawnC23gow3Yre7ardvM
+ipfs swarm connect /ip4/159.89.116.13/tcp/4001/ipfs/QmbowGXGciNnipnv3SwKMa5wt3uawnC23gow3Yre7ardvM</code></pre>
+							<p>This will enable faster discovery of the content of this website from your local node.</p>
+						</li>
+
+						<!-- Click -->
+						<li>
+							<strong>Click on a link!</strong>
+							<p>
+								You can use <kbd>CTRL + F</kbd> to find your device faster. Don't know which device is yours?
+								Use <a href="https://play.google.com/store/apps/details?id=com.natoboram.flutterdeviceinfo">Flutter Device
+									Info</a> to find out!
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<br />
 
 		<!-- Devices -->
 		<div class="table-responsive">
@@ -80,12 +162,16 @@
 				</thead>
 				<tbody id="devices">
 					<!-- HoganJS -->
-					<div class="spinner-border"></div>
+					<tr>
+						<td colspan="5">
+							<div class="spinner-border"></div>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
 
-	</div>
+	</main>
 </body>
 
 </html>
