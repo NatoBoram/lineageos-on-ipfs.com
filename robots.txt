@@ -4,8 +4,11 @@ Disallow: /.vscode/
 Disallow: /js/
 Disallow: /mustache/
 Disallow: /php/
+Disallow: /phpmyadmin/
 Disallow: /templates/
 Disallow: .gitignore
 Disallow: .jshintrc
 Disallow: hulk.sh
+Disallow: index.nginx-debian.html
+Disallow: ipfs.sh
 Disallow: README.md
