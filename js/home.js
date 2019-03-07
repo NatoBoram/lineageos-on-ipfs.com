@@ -1,14 +1,22 @@
 if (!!!losgoi) var losgoi = {};
 losgoi.home = {
 
-	init: function() {
-		$.getJSON("ajax/devices.php", null, losgoi.home.show);
+	/**
+	 * Base URL
+	 */
+	url: "https://lineageos-on-ipfs.com/",
 
-		// Start IPFS
-		const node = new window.Ipfs();
-		node.on('ready', () => {});
+	/**
+	 * Initializes the home page.
+	 */
+	init: function() {
+		$.getJSON(losgoi.home.url + "ajax/devices.php", null, losgoi.home.show);
 	},
 
+	/**
+	 * Display the list of devices using HoganJS.
+	 * @param {JSON} json All the devices that are stored in the local IPFS node.
+	 */
 	show: function(json) {
 
 		// Prepare
@@ -36,3 +44,7 @@ losgoi.home = {
 	}
 };
 losgoi.home.init();
+
+// Start IPFS
+const node = new window.Ipfs();
+node.on('ready', () => {});
