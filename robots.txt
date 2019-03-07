@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /js/
+Disallow: /mustache/
+Disallow: /php/
+Disallow: /templates/
+Disallow: .gitignore
+Disallow: .jshintrc
+Disallow: hulk.sh
+Disallow: README.md
