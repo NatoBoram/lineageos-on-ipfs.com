@@ -1,3 +1,3 @@
 #!/bin/sh
 ./hulk.sh
-ipfs add -wr js templates index.html robots.txt
+ipfs add -wr --chunker=rabin js templates index.html robots.txt
