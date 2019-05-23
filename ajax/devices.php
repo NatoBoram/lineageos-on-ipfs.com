@@ -46,6 +46,9 @@ while ($row = $stmt->fetch()) {
 	array_push($devices, $build);
 }
 
+// Allow cross-origin access because this is a public API.
+header('Access-Control-Allow-Origin: *');
+
 // Output as JSON
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode($devices);
